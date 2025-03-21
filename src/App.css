@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+#root {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(33, 37, 41);  
+}
+/* body{
+  height: 1000px;
+}  */
+
+.my_job, .words{
+  font-family: "SUSE", sans-serif;
+  color: gray;
+}
+
+.bgColor{
+  background-color:    #495057;
+}
+
+.navBar{
+  position: sticky !important;
+  top: 0;
+  z-index: 1020; /* Ensure it's above other elements */
+}
+.My_photo div img{
+  /* width: 400px;
+  height: 400px; */
+  object-fit: cover;
+}
+.intro-content{
+  padding-left: 70px;
+}
+@media screen and (max-width: 768px) {
+  .intro-content{
+    padding-left: 0px;
+    align-items: center;
+    justify-items: center;
+  }
+  
+}
+
+.style_dot {
+  color: rgb(62, 62, 238);
+}
+.wave {
+  font-size: 2rem;
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.fontWithGrayBG{
+  font-family: "SUSE", sans-serif;
+  color: rgb(33, 37, 41);
+}
+
+.skills-icons:hover{
+  transform: scale(1.2);
+  transition: all 0.4s ease-in-out ;
+}
+
+.React-icons{
+  font-size: 5rem;
+  color:rgb(88 196 220) ;
+}
+.JS-icons{
+  font-size: 5rem;
+  color:rgba(252, 185, 0, 1)  ;
+
+}
+.Redux-icons{
+  font-size: 5rem;
+  color:rgb(118, 74, 188) ;
+}
+
+.Bootstrap-icons{
+  font-size: 5rem;
+  color: rgb(121, 82, 179) ;
+}
+.Tailwind-icons{
+  font-size: 5rem;
+  color: rgb(59, 130, 246) ;
+}
+.Node-icons{
+  font-size: 5rem;
+  color: rgb(83, 160, 72)  ;
+}
+.Express-icons{
+  font-size: 5rem;
+  color: rgb(0, 0, 0) ;
+}
+.Next-icons{
+  font-size: 5rem;
+  color: rgb(0, 0, 0) ;
+}
+.Typescript-icons{
+  font-size: 5rem;
+  color: rgb(0, 122, 204) ;
+}
+
+
+
+.box{
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.exp-box{
+  margin-top: 20px;
+  width: 100%;
+  padding:  20px;
+  border-radius: 30px;
+  box-shadow: rgba(164, 164, 180, 0.2) 0px 7px 29px 4px;
+}
+
+.footer-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-section{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+.projectCard{
+  box-shadow: rgba(164, 164, 180, 0.2) 0px 7px 29px 4px;
+}
+
+
