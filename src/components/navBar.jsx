@@ -8,7 +8,7 @@ export default function NavBar() {
                 animate={{ y: 0 }}
                 transition={{ delay: 0.5, type: 'spring', stiffness: 400 }}
              className="container ">
-                <a className="navbar-brand text-light fa" href="#">ZLM</a>
+                <div className="navbar-brand text-light fa" href="">ZLM</div>
                 <button
                     className="navbar-toggler bg-light"
                     type="button"
