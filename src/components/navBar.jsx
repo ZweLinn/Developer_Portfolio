@@ -39,7 +39,7 @@ export default function NavBar() {
                                 <a className="nav-link text-light " href="https://www.facebook.com/zwe.l.maung.562"> <i className="fa-brands fa-facebook"></i> </a>
                                 <a className="nav-link text-light " href="https://github.com/ZweLinn"><i className="fa-brands fa-github"></i> </a>
                                 <a className="nav-link text-light " href="https://x.com/Yuno59515218"><i className="fa-brands fa-twitter"></i> </a>
-                                <a className="nav-link text-light " href="https://www.linkedin.com/in/zwe-linn-maung-7638a2301"><i class="fa-brands fa-linkedin"></i> </a>
+                                <a className="nav-link text-light " href="https://www.linkedin.com/in/zwe-linn-maung-7638a2301"><i className="fa-brands fa-linkedin"></i> </a>
                         </li>
                     </ul>
                 </div>
