@@ -6,7 +6,7 @@ import { a, tr } from "framer-motion/client";
 export default function Home() {
     
     const downloadCV = () => {
-        window.open("https://drive.google.com/file/d/1RCAPb_WTtSBOXdrvwQXSjIv-BzYDDNsJ/view?usp=drive_link");
+        window.open("https://drive.google.com/file/d/1EHYrND1nwnCCdP_1h9XCCm_lSDBD6Kpo/view");
     };
     const varients={
         hidden:{

@@ -5,8 +5,14 @@ export default function Myservice() {
         hidden: {
             x: -150,
             opacity: 0,
-
-
+        },
+        visible: {
+            x: 0,
+            opacity: 1
+        },
+        visible: {
+            x: 0,
+            opacity: 1
         },
     }
 
@@ -15,6 +21,10 @@ export default function Myservice() {
             x: 30,
             opacity: 0
         },
+        visible: {
+            x: 0,
+            opacity: 1
+        },
 
     }
     const varients3 = {
@@ -22,11 +32,19 @@ export default function Myservice() {
             y: -150,
             opacity: 0
         },
+        visible: {
+            y: 0,
+            opacity: 1
+        },
     }
     const varients4 = {
         hidden: {
             y: 150,
             opacity: 0
+        },
+        visible: {
+            y: 0,
+            opacity: 1
         },
     }
     return (
@@ -43,7 +61,8 @@ export default function Myservice() {
                 <motion.div
                     variants={varients}
                     initial="hidden"
-                    whileInView={{ x: 0, opacity: 1 }}
+                    animate= 'visible'
+                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
 
                     className="col-md-4 col-sm-6 mt-3">
@@ -59,6 +78,7 @@ export default function Myservice() {
                 <motion.div
                     variants={varients3}
                     initial="hidden"
+                     viewport={{ once: true }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="col-md-4 col-sm-6 mt-3">
@@ -74,6 +94,7 @@ export default function Myservice() {
                 <motion.div
                     variants={varients2}
                     initial="hidden"
+                    viewport={{ once: true }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="col-md-4 col-sm-6 mt-3">
@@ -89,6 +110,7 @@ export default function Myservice() {
                 <motion.div
                     variants={varients}
                     initial="hidden"
+                     viewport={{ once: true }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="col-md-4 col-sm-6 mt-3">
@@ -105,6 +127,7 @@ export default function Myservice() {
                 <motion.div
                     variants={varients4}
                     initial="hidden"
+                    viewport={{ once: true }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="col-md-4  col-sm-6 mt-3">
@@ -120,6 +143,7 @@ export default function Myservice() {
                 <motion.div
                     variants={varients2}
                     initial="hidden"
+                    viewport={{ once: true }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="col-md-4 col-sm-6 mt-3">

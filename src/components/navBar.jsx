@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react"
+
 export default function NavBar() {
+   
     return (
         <nav className="navbar navbar-expand-md bg-dark sticky-top ">
             <motion.div
-                initial={{ y: -250 }}
-                animate={{ y: 0 }}
-                transition={{ delay: 0.5, type: 'spring', stiffness: 400 }}
+                // initial={{ y: -250 }}
+                // animate={{ y: 0 }}
+                // transition={{ delay: 0.5, type: 'spring', stiffness: 400 }}
              className="container ">
                 <div className="navbar-brand text-light fa" href="">ZLM</div>
                 <button
