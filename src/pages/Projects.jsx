@@ -1,6 +1,7 @@
 import MyProjects from "../components/Projects/myProjects";
 import TypeForProjects from "../components/Projects/Type";
 
+
 export default function Projects() {
     return (
         <div className="Projects container-fluid">
