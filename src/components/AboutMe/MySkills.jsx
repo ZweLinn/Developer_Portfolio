@@ -1,6 +1,6 @@
 
-import { FaReact, FaJs, FaBootstrap } from "react-icons/fa";
-import { SiRedux, SiExpress, SiNextdotjs , SiTypescript } from "react-icons/si";
+import { FaReact, FaJs, FaBootstrap, FaPython, FaGitAlt, FaGithub, FaFigma } from "react-icons/fa";
+import { SiRedux, SiExpress, SiNextdotjs, SiTypescript, SiLaravel, SiPostgresql } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { Col, Row } from "react-bootstrap";
 import { LiaNode } from "react-icons/lia";
@@ -124,6 +124,72 @@ export default function MySkills() {
                         transition={{ duration: 1 }}
                         >
                         <SiTypescript />
+                    </motion.div>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3} xl={2} className="Laravel-icons skills-icons">
+                    <motion.div
+                        variants={varientAbove}
+                        initial="hidden"
+                        whileInView="whileInView"
+                        transition={{ duration: 1 }}
+                        >
+                        <SiLaravel />
+                    </motion.div>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3} xl={2} className="Python-icons skills-icons">
+                    <motion.div
+                        variants={varientAbove}
+                        initial="hidden"
+                        whileInView="whileInView"
+                        transition={{ duration: 1 }}
+                        >
+                        <FaPython />
+                    </motion.div>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3} xl={2} className="Postgresql-icons skills-icons">
+                    <motion.div
+                        variants={varientAbove}
+                        initial="hidden"
+                        whileInView="whileInView"
+                        transition={{ duration: 1 }}
+                        >
+                        <SiPostgresql />
+                    </motion.div>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3} xl={2} className="Figma-icons skills-icons">
+                    <motion.div
+                        variants={varientBottom}
+                        initial="hidden"
+                        whileInView="whileInView"
+                        transition={{ duration: 1 }}
+                        >
+                        <FaFigma />
+                    </motion.div>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3} xl={2} className="Git-icons skills-icons">
+                    <motion.div
+                        variants={varientBottom}
+                        initial="hidden"
+                        whileInView="whileInView"
+                        transition={{ duration: 1 }}
+                        >
+                        <FaGitAlt />
+                    </motion.div>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3} xl={2} className="GitHub-icons skills-icons">
+                    <motion.div
+                        variants={varientBottom}
+                        initial="hidden"
+                        whileInView="whileInView"
+                        transition={{ duration: 1 }}
+                        >
+                        <FaGithub />
                     </motion.div>
                 </Col>
             </Row>

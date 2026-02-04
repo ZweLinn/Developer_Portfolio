@@ -13,7 +13,8 @@ const Experiences = () => {
   };
 
   const experiences = [
-    { Date :"Present" ,title: "Freelancer", description: "I am currently working web development as a freelancer." },
+    { Date :"Present" ,title: "Freelancer", description: "I am currently working as a freelancer." },
+    { Date :"September 2025 - February 2026",title: "Full Stack Engineer", description: "Worked as a Full Stack Engineer in a YGNCodelab" },
     { Date :"January 2023 - December 2024",title: "System Support", description: "Worked as a system support(odoo erp) in a Software provider company." },
   ];
 

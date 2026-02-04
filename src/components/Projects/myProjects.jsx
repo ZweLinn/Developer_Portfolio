@@ -1,6 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import bookstoreImg from "../../assets/projectImage/Bookstore.png"
 import CoinSite from "../../assets/projectImage/CoinInsight.png"
+import MDJ from "../../assets/projectImage/MyanmarDevJobs.png"
 import Card from 'react-bootstrap/Card';
 import { FaGithub } from "react-icons/fa";
 import { motion } from "motion/react"
@@ -8,6 +9,14 @@ export default function MyProjects() {
     const projectData = [
         {
             id: 1,
+            title: "MyanmarDevJobs",
+            description: "Jobs portal site for Myanmar developers and designers.",
+            image: MDJ,
+            link: "https://myanmardevjobs.com",
+            repo: null
+        },
+        {
+            id: 2,
             title: "BookStore",
             description: "Simple CURD book info note with MERN stack",
             image: bookstoreImg,
@@ -15,7 +24,7 @@ export default function MyProjects() {
             repo: "https://github.com/ZweLinn/Bookstore"
         },
         {
-            id: 2,
+            id: 3,
             title: "Coin Insight",
             description: "Crypto info site with React, RTK query.",
             image: CoinSite,
@@ -32,19 +41,25 @@ export default function MyProjects() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: project.id * 0.5 , ease: "easeOut"}}
                     key={project.id} xl={6} md={12} style={{ width: '25rem', margin: '10px 10px 10px 10px' }}  >
-                        <Card className="bg-dark projectCard" style={{ borderRadius: '20px', padding: '10px' }} >
-                            <Card.Img variant="top" src={project.image} style={{ borderRadius: '20px', padding: '10px' }} />
-                            <Card.Body className="bg-dark" >
+                        <Card className="bg-dark projectCard" style={{ borderRadius: '20px', padding: '10px', height: '100%' }} >
+                            <div style={{ height: '200px', overflow: 'hidden', borderRadius: '20px' }}>
+                                <Card.Img variant="top" src={project.image} style={{ borderRadius: '20px', objectFit: 'cover', height: '100%', width: '100%' }} />
+                            </div>
+                            <Card.Body className="bg-dark d-flex flex-column" >
                                 <Card.Title className="text-light">{project.title}</Card.Title>
                                 <Card.Text className="words">
                                     {project.description}
                                 </Card.Text>
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                                    View Project
-                                </a>
-                                <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn btn-secondary ms-3">
-                                    <FaGithub />&nbsp;View Project
-                                </a>
+                                <div className="mt-auto">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                                        View Project
+                                    </a>
+                                    {project.repo && (
+                                        <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn btn-secondary ms-3">
+                                            <FaGithub />&nbsp;GitHub
+                                        </a>
+                                    )}
+                                </div>
                             </Card.Body>
 
                         </Card>
