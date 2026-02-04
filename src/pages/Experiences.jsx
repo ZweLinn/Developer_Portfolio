@@ -18,7 +18,7 @@ const Experiences = () => {
   ];
 
   return (
-    <div className="myExperiences">
+    <div className="experiences-page">
         <h3 className="words text-light mt-4">My work experience</h3>
     <Row className=" p-5 container-fluid exp-container">
       {experiences.map((exp, index) => (

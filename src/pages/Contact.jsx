@@ -1,18 +1,24 @@
-
 import ContactForm from "../components/Contact/contactForm";
 import TypeforContact from "../components/Contact/Type";
 import { FaRegHandPointDown } from "react-icons/fa6";
+import { motion } from "motion/react";
+
 export default function Contact() {
     return (
-        <div className="container-fluid  bg-dark">
+        <div className="contact-page container-fluid">
             <div className="row text-center">
-                <div className="py-4" >
-                    <p className="words">Do you have any projects?</p>
-                    <h4 className="words text-light">I'm avaliable for Freelance Project</h4>
-                    <h5 className="words">Contact me</h5>
-                    <div className="fs-5 words mt-4"><FaRegHandPointDown /></div>
-                
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="section-title-wrapper"
+                >
+                    <span className="section-subtitle">Get in touch</span>
+                    <h2 className="section-title">Contact Me</h2>
+                    <div className="section-title-line"></div>
+                    <p className="words mt-3">I'm available for Freelance Projects</p>
+                    <div className="scroll-indicator"><FaRegHandPointDown /></div>
+                </motion.div>
                 <ContactForm/>
             </div>
         </div>

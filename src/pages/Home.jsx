@@ -1,33 +1,20 @@
 import CV from "../assets/Profile.png";
 import { useNavigate } from "react-router-dom";
 import Type from "../components/Home/Type";
-import { motion } from "motion/react"
-import { a, tr } from "framer-motion/client";
+import { motion } from "motion/react";
 export default function Home() {
     
     const downloadCV = () => {
         window.open("https://drive.google.com/file/d/1EHYrND1nwnCCdP_1h9XCCm_lSDBD6Kpo/view");
     };
-    const varients={
-        hidden:{
-            x: -100,
-            opacity: 0
-        },
-        visible:{
-            x: 0,
-            opacity: 1
-        },
+    const variants = {
+        hidden: { x: -100, opacity: 0 },
+        visible: { x: 0, opacity: 1 },
     }
 
-    const varients2={
-        hidden:{
-            x: 100,
-            opacity: 0
-        },
-        visible:{
-            x: 0,
-            opacity: 1
-        },
+    const variants2 = {
+        hidden: { x: 100, opacity: 0 },
+        visible: { x: 0, opacity: 1 },
     }
     const navigate = useNavigate();
     const handleHireMe = () => {
@@ -35,9 +22,9 @@ export default function Home() {
     };
     return (
 
-        <div className="text-light bg-dark">
+        <div className="home-page text-light">
             <section className="container-fluid">
-                <div className="home_content row bg-dark align-items-center pb-5">
+                <div className="home_content row align-items-center pb-5">
                     <div className="col-md-6 text-light text-center">
                         <img
                             src={CV}
@@ -51,7 +38,7 @@ export default function Home() {
                             <span className="wave" role="img" aria-labelledby="wave">👋🏻</span>
                             <span className="words"> Hello I'm</span>
                             <motion.div 
-                            variants={varients}
+                            variants={variants}
                             initial="hidden"
                             animate="visible"
                             transition={{duration: .8}}
@@ -60,7 +47,7 @@ export default function Home() {
                             </motion.div>
                             <Type />
                             <motion.p
-                             variants={varients2}
+                             variants={variants2}
                                 initial="hidden"
                                 animate="visible"
                                 transition={{duration: 1.5}}

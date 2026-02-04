@@ -54,13 +54,18 @@ const variants = {
 
 export default function Myservice() {
     return (
-        <div className="container-fluid bgColor text-light py-4 ">
-            <div className="col-4 offset-4 text-center words ">
-                <p> &#9866; My services</p>
-            </div>
-            <div className="col-4 offset-4 text-center words text-light fw-bold">
-                <h2> What Can I do</h2>
-            </div>
+        <div className="container-fluid services-section text-light py-5">
+            <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="section-title-wrapper mb-4"
+            >
+                <span className="section-subtitle">What I offer</span>
+                <h2 className="section-title">My Services</h2>
+                <div className="section-title-line"></div>
+            </motion.div>
             {/* boxes start */}
             <div className="row px-5 mt-2 pb-5 text-center">
                 {serviceData.map((service) => (

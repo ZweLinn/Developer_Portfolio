@@ -1,112 +1,55 @@
-import { useRef } from "react";
 import TypeforAbout from "./Type";
 import TypeforHobby from "./Type2";
 import { motion } from "motion/react"
 import { Link } from "react-router-dom";
 
-export default function AboutMeText() {
-    const varients = {
-        hidden: {
-            x: -100,
-            opacity: 0
-        },
-        visible: {
-            x: 0,
-            opacity: 1
-        },
-    }
+const hobbiesData = [
+    { id: 1, icon: "fa-solid fa-gamepad", title: "Playing Games" },
+    { id: 2, icon: "fa-solid fa-book-open", title: "Reading Books" },
+    { id: 3, icon: "fa-solid fa-dumbbell", title: "Physical Exercise" },
+]
 
-    const varients2 = {
-        hidden: {
-            x: 100,
-            opacity: 0
-        },
-        visible: {
-            x: 0,
-            opacity: 1
-        },
-    }
-    const scrollRef = useRef(null)
+const variants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+}
+
+export default function AboutMeText() {
     return (
         <div className="row mt-4">
             {/* Left Side */}
             <div className="col-md-6 align-content-center justify-content-center ps-5 mt-5 text-start">
                 <TypeforAbout />
-                <p className="text-lighst words left-side_words">
+                <p className="text-light words left-side_words">
                     My name is Zwe Linn Maung. I'm a full-stack developer based in Myanmar, currently living in Thailand. I specialize in building modern web applications using Next.js for frontend and Laravel for backend development.
                     <br/> <br/> I have hands-on experience with AI integration, building AI-powered applications and leveraging AI tools to enhance development workflows. My deployment expertise includes traditional VPS hosting with Nginx and PM2, as well as AWS cloud infrastructure.
-                    <br/> <br/> I enjoy solving problems, creating user-focused applications, and continuously exploring new technologies to deliver efficient, scalable solutions.                </p>
+                    <br/> <br/> I enjoy solving problems, creating user-focused applications, and continuously exploring new technologies to deliver efficient, scalable solutions.
+                </p>
                 <Link to={'/experiences'}><button className="btn btn-primary mb-5">Experience</button></Link>
-                
             </div>
 
             {/* Right Side */}
             <div className="col-md-6 my_hobby ps-5 mt-5">
                 <h2 className="text-light words left-side_title text-start">Apart from coding,</h2>
                 <TypeforHobby />
-                <div className="hobby my-5 mx-5">
-
-                    <div className="playingGame d-flex gap-5 mb-4">
+                <div className="hobby my-5">
+                    {hobbiesData.map((hobby, index) => (
                         <motion.div
-                            variants={varients}
+                            key={hobby.id}
+                            variants={variants}
                             initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 1 }}
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            className="hobby-item"
                         >
-                            <i className="fa-solid fa-gamepad fa-2x style_dot"></i>
+                            <div className="hobby-icon">
+                                <i className={hobby.icon}></i>
+                            </div>
+                            <h5 className="words mb-0">{hobby.title}</h5>
                         </motion.div>
-                        <motion.h5
-                            variants={varients2}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 1 }}
-                            className="words">
-                            Playing Games
-                        </motion.h5>
-
-                    </div>
-                    <div className="reading d-flex gap-5 mb-4">
-                        <motion.div
-                            variants={varients}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 1 }}
-                        >
-                            <i className="fa-solid fa-book-open fa-2x style_dot"></i>
-                        </motion.div>
-
-                        <motion.h5
-                            variants={varients2}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 1 }}
-                            className="words">
-                            Reading Books
-                        </motion.h5>
-
-                    </div>
-                    <div className="reading d-flex gap-5 mb-4">
-                        <motion.div
-                            variants={varients}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 1 }}
-                        >
-                            <i className="fa-solid fa-dumbbell fa-2x style_dot"></i>
-                        </motion.div>
-
-                        <motion.h5
-                            variants={varients2}
-                            initial="hidden"
-                            animate="visible"
-                            transition={{ duration: 1 }}
-                            className="words">
-                            Physical Exercise
-                        </motion.h5>
-
-                    </div>
+                    ))}
                 </div>
-
             </div>
         </div>
     )
