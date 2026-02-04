@@ -35,8 +35,8 @@ export default function MyProjects() {
     return (
         <Row className="g-4 d-flex justify-content-center  my-5">
             {projectData.map((project) => (
-                    <motion.Col 
-                    custon = {project.id}
+                    <motion.Col
+                    custom={project.id}
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: project.id * 0.5 , ease: "easeOut"}}
@@ -45,7 +45,7 @@ export default function MyProjects() {
                             <div style={{ height: '200px', overflow: 'hidden', borderRadius: '20px' }}>
                                 <Card.Img variant="top" src={project.image} style={{ borderRadius: '20px', objectFit: 'cover', height: '100%', width: '100%' }} />
                             </div>
-                            <Card.Body className="bg-dark d-flex flex-column" >
+                            <Card.Body className=" d-flex flex-column" >
                                 <Card.Title className="text-light">{project.title}</Card.Title>
                                 <Card.Text className="words">
                                     {project.description}

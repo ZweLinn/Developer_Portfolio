@@ -73,9 +73,11 @@ export default function Myservice() {
                         transition={{ duration: 1 }}
                         className="col-md-4 col-sm-6 mt-3"
                     >
-                        <div className="box bg-dark">
+                        <div className="box">
                             <div className="text-light">
-                                <i className={`${service.icon} text-primary fs-4 mb-3`}></i>
+                                <div className="service-icon">
+                                    <i className={service.icon}></i>
+                                </div>
                                 <h4 className="words text-light">{service.title}</h4>
                                 <p className="words">{service.description}</p>
                             </div>

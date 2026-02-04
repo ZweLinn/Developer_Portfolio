@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
-import { Row } from "react-bootstrap"; // Assuming you're using react-bootstrap
+import { Row } from "react-bootstrap";
 
 const Experiences = () => {
   const boxVariants = {
@@ -45,4 +44,3 @@ const Experiences = () => {
 };
 
 export default Experiences;
-``

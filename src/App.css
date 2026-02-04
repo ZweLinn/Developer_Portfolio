@@ -158,17 +158,148 @@
 
 .box{
   padding: 30px;
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(52, 58, 64, 0.9), rgba(33, 37, 41, 0.95));
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(62, 62, 238, 0.3), rgba(62, 62, 238, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(62, 62, 238, 0.2), 0 0 30px rgba(62, 62, 238, 0.1);
+  border-color: rgba(62, 62, 238, 0.3);
+}
+
+.box:hover::before {
+  opacity: 1;
+}
+
+/* Service icon styling */
+.service-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(62, 62, 238, 0.2), rgba(62, 62, 238, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(62, 62, 238, 0.3);
+}
+
+.service-icon i {
+  font-size: 1.8rem;
+  color: rgb(62, 62, 238);
+  transition: all 0.4s ease;
+}
+
+.box:hover .service-icon {
+  background: linear-gradient(135deg, rgb(62, 62, 238), rgba(62, 62, 238, 0.7));
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 30px rgba(62, 62, 238, 0.4);
+}
+
+.box:hover .service-icon i {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Service title styling */
+.box h4 {
+  transition: all 0.3s ease;
+}
+
+.box:hover h4 {
+  color: rgb(62, 62, 238) !important;
+}
+
+/* Service description styling */
+.box p {
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 
 .exp-box{
   margin-top: 20px;
   width: 100%;
-  padding:  20px;
-  border-radius: 30px;
-  box-shadow: rgba(164, 164, 180, 0.2) 0px 7px 29px 4px;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(52, 58, 64, 0.9), rgba(33, 37, 41, 0.95));
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(62, 62, 238, 0.3), rgba(62, 62, 238, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.exp-box:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(62, 62, 238, 0.2), 0 0 30px rgba(62, 62, 238, 0.1);
+  border-color: rgba(62, 62, 238, 0.3);
+}
+
+.exp-box:hover::before {
+  opacity: 1;
+}
+
+.exp-box h4 {
+  transition: all 0.3s ease;
+}
+
+.exp-box:hover h4 {
+  color: rgb(62, 62, 238) !important;
+}
+
+.exp-box p {
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .footer-section{
@@ -185,7 +316,58 @@
 }
 
 .projectCard{
-  box-shadow: rgba(164, 164, 180, 0.2) 0px 7px 29px 4px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(52, 58, 64, 0.9), rgba(33, 37, 41, 0.95)) !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.projectCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(62, 62, 238, 0.3), rgba(62, 62, 238, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(62, 62, 238, 0.2), 0 0 30px rgba(62, 62, 238, 0.1);
+  border-color: rgba(62, 62, 238, 0.3);
+}
+
+.projectCard:hover::before {
+  opacity: 1;
+}
+
+.projectCard .card-title {
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover .card-title {
+  color: rgb(62, 62, 238) !important;
+}
+
+.projectCard img {
+  transition: all 0.4s ease;
+}
+
+.projectCard:hover img {
+  transform: scale(1.05);
 }
 
 
