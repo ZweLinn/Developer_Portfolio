@@ -35,17 +35,6 @@ export default function MySkills() {
             </h3>
 
             <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-                <Col xs={6} sm={6} md={4} lg={3} xl={2} className="Bootstrap-icons skills-icons">
-                    <motion.div
-                        variants={varientAbove}
-                        initial="hidden"
-                        whileInView="whileInView"
-                        transition={{ duration: 1 }}
-                    >
-                        <FaBootstrap />
-                    </motion.div>
-                </Col>
-
                 <Col xs={6} sm={6} md={4} lg={3} xl={2} className="Tailwind-icons skills-icons">
                     <motion.div
                         variants={varientAbove}

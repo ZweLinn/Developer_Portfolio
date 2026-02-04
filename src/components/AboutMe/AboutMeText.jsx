@@ -33,10 +33,9 @@ export default function AboutMeText() {
             <div className="col-md-6 align-content-center justify-content-center ps-5 mt-5 text-start">
                 <TypeforAbout />
                 <p className="text-lighst words left-side_words">
-                My name is Zwe Linn Maung. I'm a web developer based in Myanmar, currently living in Thailand, with a solid foundation in HTML, CSS, JavaScript, and responsive design. I have also worked on modern Javascript library and framework like React.js, redux and Next.js. <br /> <br />
-                    I enjoy solving problems and building user-focused websites. I’m continuously learning new technologies to expand my skills and tech stack.
-                    I also have experiences with Node.js, Express.js, and RESTful APIs for server-side development.
-                </p>
+                    My name is Zwe Linn Maung. I'm a full-stack developer based in Myanmar, currently living in Thailand. I specialize in building modern web applications using Next.js for frontend and Laravel for backend development.
+                    <br/> <br/> I have hands-on experience with AI integration, building AI-powered applications and leveraging AI tools to enhance development workflows. My deployment expertise includes traditional VPS hosting with Nginx and PM2, as well as AWS cloud infrastructure.
+                    <br/> <br/> I enjoy solving problems, creating user-focused applications, and continuously exploring new technologies to deliver efficient, scalable solutions.                </p>
                 <Link to={'/experiences'}><button className="btn btn-primary mb-5">Experience</button></Link>
                 
             </div>
