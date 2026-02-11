@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export default function Home() {
     
     const downloadCV = () => {
-        window.open("https://drive.google.com/file/d/1EHYrND1nwnCCdP_1h9XCCm_lSDBD6Kpo/view");
+        window.open("https://drive.google.com/file/d/1xA21DkzMM8X8mgnN5NmGLTEEoVKrnTvN/view");
     };
     const variants = {
         hidden: { x: -100, opacity: 0 },

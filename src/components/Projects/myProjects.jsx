@@ -2,6 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import bookstoreImg from "../../assets/projectImage/Bookstore.png"
 import CoinSite from "../../assets/projectImage/CoinInsight.png"
 import MDJ from "../../assets/projectImage/MyanmarDevJobs.png"
+import SwayNway from "../../assets/projectImage/SwayNway.png"
 import Card from 'react-bootstrap/Card';
 import { FaGithub } from "react-icons/fa";
 import { motion } from "motion/react"
@@ -17,6 +18,15 @@ export default function MyProjects() {
         },
         {
             id: 2,
+            title: "Sway Nway",
+            description: "A book discussion platform powered by AI.",
+            image: SwayNway,
+            link: "https://sway-nway-production.up.railway.app",
+            repo: "https://github.com/ZweLinn/Sway-Nway"
+
+        },
+        {
+            id: 3,
             title: "BookStore",
             description: "Simple CURD book info note with MERN stack",
             image: bookstoreImg,
@@ -24,7 +34,7 @@ export default function MyProjects() {
             repo: "https://github.com/ZweLinn/Bookstore"
         },
         {
-            id: 3,
+            id: 4,
             title: "Coin Insight",
             description: "Crypto info site with React, RTK query.",
             image: CoinSite,
