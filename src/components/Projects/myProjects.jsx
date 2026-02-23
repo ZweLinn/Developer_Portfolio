@@ -21,7 +21,7 @@ export default function MyProjects() {
             title: "Sway Nway",
             description: "A book discussion platform powered by AI.",
             image: SwayNway,
-            link: "https://sway-nway-production.up.railway.app",
+            link: "https://swaynway.site",
             repo: "https://github.com/ZweLinn/Sway-Nway"
 
         },
