@@ -3,6 +3,7 @@ import bookstoreImg from "../../assets/projectImage/Bookstore.png"
 import CoinSite from "../../assets/projectImage/CoinInsight.png"
 import MDJ from "../../assets/projectImage/MyanmarDevJobs.png"
 import SwayNway from "../../assets/projectImage/SwayNway.png"
+import Clipcast from "../../assets/projectImage/Clipcast.png"
 import Card from 'react-bootstrap/Card';
 import { FaGithub } from "react-icons/fa";
 import { motion } from "motion/react"
@@ -27,6 +28,14 @@ export default function MyProjects() {
         },
         {
             id: 3,
+            title: "Clipcast",
+            description: "Video recording and sharing platform.",
+            image: Clipcast,
+            link: "https://clipcast.site",
+            repo: "https://github.com/ZweLinn/Clip-cast"
+        },
+        {
+            id: 4,
             title: "BookStore",
             description: "Simple CURD book info note with MERN stack",
             image: bookstoreImg,
@@ -34,7 +43,7 @@ export default function MyProjects() {
             repo: "https://github.com/ZweLinn/Bookstore"
         },
         {
-            id: 4,
+            id: 5,
             title: "Coin Insight",
             description: "Crypto info site with React, RTK query.",
             image: CoinSite,
